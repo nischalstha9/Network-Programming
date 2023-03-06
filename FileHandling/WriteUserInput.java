@@ -31,6 +31,7 @@ public class WriteUserInput {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter text to write to file:");
         String input = sc.nextLine();
+        sc.close();
         try {
             TextOperation.write(input, path);
             System.out.println("Data successfully written to new file.");

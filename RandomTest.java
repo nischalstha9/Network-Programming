@@ -11,6 +11,7 @@ public class RandomTest {
         System.out.println("Enter any num between 0 - 100");
 
         int user_num1 = sc.nextInt();
+        sc.close();
 
         System.out.println("Random Num is " + random_num);
         if (user_num1 == random_num) {
