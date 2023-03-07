@@ -21,13 +21,13 @@
 //     }
 // }
 
-package FileHandling;
+import FileHandling.TextOperation;
 
 import java.util.Scanner;
 
 public class WriteUserInput {
     public static void main(String[] args) {
-        String path = "C:/Users/sthan/Desktop/java_written.txt";
+        String path = "java-written.txt";
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter text to write to file:");
         String input = sc.nextLine();
