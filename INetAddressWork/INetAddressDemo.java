@@ -1,3 +1,5 @@
+package INetAddressWork;
+
 import java.util.Arrays;
 import java.net.InetAddress;
 
@@ -8,7 +10,7 @@ public class INetAddressDemo {
             InetAddress ip1 = InetAddress.getByName(host);
             byte addr[] = { 72, 3, 2, 12 };
             System.out.println("ip1 : " + ip1);
-            System.out.println("Address : " + ip1.getAddress());
+            System.out.println("Address : " + Arrays.toString(ip1.getAddress()));
             System.out.println("Host Address : " + ip1.getHostAddress());
             System.out.println("Host Name : " + ip1.getHostName());
             System.out.println("Canonical Host Name : " + ip1.getCanonicalHostName());
