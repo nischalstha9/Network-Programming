@@ -1,16 +1,19 @@
+package URL_Class;
+
+import java.net.*;
 import java.io.*;
 
-public class BufferReader {
+public class Data_From_URL {
     public static void main(String[] args) {
         try {
-            File file = new File("java-written.txt");
-            FileReader read = new FileReader(file);
-            BufferedReader br = new BufferedReader(read);
+            URL url = new URL("https://shrestha-nischal.com.np");
+            URLConnection uc = url.openConnection();
+            BufferedReader br = new BufferedReader(new InputStreamReader(uc.getInputStream()));
             String line;
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
-            br.close();
+
         } catch (Exception e) {
             System.out.println(e);
         }
