@@ -18,6 +18,14 @@ class URLUtilities {
     }
 
     public static int writeToFile(String text, String path) throws Exception {
+        File file = new File(path);
+        FileWriter filewriter = new FileWriter(file);
+        filewriter.write(text);
+        filewriter.close();
+        return 0;
+    }
+
+    public static int writeToFileWithOutputStream(String text, String path) throws Exception {
         FileOutputStream writeFile = new FileOutputStream(path);
         byte writeByte[] = text.getBytes();
         writeFile.write(writeByte);
@@ -29,17 +37,18 @@ class URLUtilities {
 public class WithFunction {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter URL you want to scrape:");
         try {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Enter URL you want to scrape:");
             String user_url_input = sc.nextLine();
             String content = URLUtilities.getData(user_url_input);
-            // System.out.println(content);
-            URLUtilities.writeToFile(content, "index.html");
-            sc.close();
+            if (URLUtilities.writeToFile(content, "index.html") == 0) {
+                System.out.println("Data successfully written to file.");
+            }
         } catch (Exception e) {
             System.out.println(e);
+        } finally {
+            sc.close();
         }
-
     }
 }

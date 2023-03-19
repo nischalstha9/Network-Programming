@@ -1,11 +1,13 @@
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.BufferedReader;
+import java.io.File;
 
 public class FileReadWriter {
     public static void main(String[] args) {
         // Write
         try {
+            File file = new File("index.html");
             FileWriter file = new FileWriter("FileReadWriter.txt");
             file.write("Hello From Nischal!");
             file.close();
