@@ -14,7 +14,6 @@ public class URLMethods {
             URL u = new URL(user_url_input);
             System.out.println(u.getContent());
             System.out.println(u.getFile());
-            System.out.println(u.getInputStream());
             System.out.println(u.getProtocol());
             System.out.println(u.getHost());
         } catch (Exception e) {

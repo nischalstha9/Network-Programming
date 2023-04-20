@@ -28,7 +28,6 @@ public class UriMethods {
 
         } catch (Exception e) {
             System.out.println(e);
-            // TODO: handle exception
         }
     }
 }
