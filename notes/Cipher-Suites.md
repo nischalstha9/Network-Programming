@@ -42,3 +42,7 @@ Generation of necessary keys to maintain protocol for the communicaton between s
 	sysout(sso.getSupportedCipherSuites());
 	sysout(sso.getRemoteSocketAddress());
 ```
+
+## Assignment
+
+1. Define CipherSuite and 4 different protocol used in Cipher Suites with a program in java.
