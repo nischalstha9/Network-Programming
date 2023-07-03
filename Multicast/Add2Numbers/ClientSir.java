@@ -1,4 +1,4 @@
-package Multicast;
+package Multicast.Add2Numbers;
 
 import java.net.*;
 import java.io.*;
@@ -26,6 +26,7 @@ public class ClientSir {
             ds.send(dp);
             ds.receive(receivePacket);
             System.out.println("Data Packet Received: \n" + Arrays.toString(receivePacket.getData()));
+
             ds.setSoTimeout(100);
             ds.close();
 
